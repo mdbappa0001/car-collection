@@ -1,10 +1,11 @@
 import React from 'react';
-import Inventory from '../Inventory/Inventory';
+import InventoryServices from '../InventoryServices/InventoryServices';
+
 
 const Home = () => {
     return (
         <div>
-            <Inventory></Inventory>
+            <InventoryServices></InventoryServices>
         </div>
     );
 };

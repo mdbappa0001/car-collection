@@ -1,0 +1,44 @@
+.images{
+    width: 450px;
+    height: auto;
+    border-radius: 8px;
+   
+}
+.carDetail{
+    width: 450px;
+    justify-content: center;
+    border: 3px solid salmon;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+.name{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 150px;
+    font-size: 2.1rem;
+    color: salmon;
+}
+.priceName{
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-left: 140px;
+    font-size: 1.5rem;
+}
+.price{
+    color: burlywood;
+}
+.supplier{
+    color: burlywood;
+}
+.supplierName{
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-left: 80px;
+    font-size: 1.3rem;
+}
+.description{
+    padding: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: rgb(49, 99, 99);
+}
