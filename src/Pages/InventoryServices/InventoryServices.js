@@ -16,7 +16,7 @@ useEffect( () =>{
             <h2>This is inventory services</h2>
         <div className='inventory-container'>
         {
-                inventoryServices.map(inventoryService => <Inventory 
+                inventoryServices.slice(0,6).map(inventoryService => <Inventory 
                 key = {inventoryService.id}
                 inventoryService={inventoryService}
                 ></Inventory>)

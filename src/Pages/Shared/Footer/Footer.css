@@ -1,0 +1,22 @@
+.main-footer{
+    background-color: black;
+    color: rgb(126, 108, 108);
+    padding: 15px;
+    margin-bottom: 0px;
+}
+.row{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    margin-left: 15%;
+}
+.title{
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: white;
+}
+.right{
+    text-align: center;
+    margin-left: 40%;
+    color: white;
+}
