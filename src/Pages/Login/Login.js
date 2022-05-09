@@ -1,42 +1,120 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import './Login.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { sendPasswordResetEmail } from 'firebase/auth';
+import SocialLogin from '../SocialLogin/SocialLogin';
+
 
 const Login = () => {
+    const emailRef = useRef('');
+    const [userInfo, setUserInfo] = useState({
+        email: '',
+        password: ''
+    })
+
+    const [errors, setErrors] = useState({
+        email:'',
+        password:'',
+        general: '',
+    })
+    
+
+    const [signInWithEmailAndPassword,user,loading,hookError,] = useSignInWithEmailAndPassword(auth);
+
+    const handleEmailChange = (e) => {
+        const emailRegex = /\S+@\S+\.\S+/;
+        const validEmail = emailRegex.test(e.target.value);
+
+        if(validEmail){
+            setUserInfo({...userInfo, email: e.target.value})
+            setErrors({...errors, email: ''})
+        }
+        else{
+            setErrors({...errors, email: 'Invalid Email'})
+            setUserInfo({...userInfo, email:''})
+        }
+        // setEmail(e.target.value);
+    }
+
+    const handlePasswordChange = (e) => {
+        const passwordRegex = /.{6,}/;
+        const validPassword = passwordRegex.test(e.target.value);
+        if(validPassword){
+            setUserInfo({...userInfo, password: e.target.value})
+            setErrors({...errors, password:''})
+        }
+        else{
+            setErrors({...errors, password:"Minimum 6 characters!"})
+            setUserInfo({...userInfo, password: ""})
+        }
+        // setPassword(e.target.value);
+    }
+
+    const handleLogin = (e) => {
+        e.preventDefault();
+        signInWithEmailAndPassword(userInfo.email, userInfo.password);
+    }
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
+
+    useEffect(() => {
+        if (user) {
+            navigate(from);
+        }
+    }, [user]);
+
+    useEffect(() => {
+        const error = hookError ;
+        if(error){
+            switch(error?.code){
+                case "auth/invalid-email":
+                    toast("Invalid email provided, please provide a valid email");
+                    break;
+                
+                case "auth/invalid-password":
+                    toast("Wrong password!!")
+                    break;
+                default:
+                    toast("something went wrong")
+            }
+        }
+    }, [hookError])
+
+    const resetPassword = async () => {
+        const email = emailRef.current.value;
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Sent email');
+        }
+        else{
+            toast('please enter your email address');
+        }
+    }
+
     return (
         <>
-            <div className='flex flex-wrap justify-center mt-20'>
-                <div className='w-full max-w-sm'>
-                    <form action="" className='shadown-md bg-white rounded px-8 pt-6 pb-8 mb-4'>
-                        <div className='mb-5'>
-                            <label htmlFor="" className='block text-gray-700 text-sm font-bold mb-2'>
-                                UserName
-                            </label>
-                            <input type="text" className='shodow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-                                placeholder="UserName"
-                            />
-                        </div>
+         <div className='login-container'>
+            <div className="login-title">LOGIN</div>
+            <form className='login-form' onSubmit={handleLogin}>
+                <input type="text" placeholder='Your Email' onChange={handleEmailChange} />
+                {errors?.email && <p className='error-message'>{errors.email}</p>}
+                <input type="password" placeholder='password' onChange={handlePasswordChange} />
+                {errors?.password && <p className='error-message'>{errors.password}</p>}
+                <button className='bg-blue-500 hover:bg-blue-700 text-white rounded-full'>Login</button>
 
-                        <div className='mb-6'>
-                            <label htmlFor="password" className='block text-gray-700 text-sm font-bold mb-2'>
-                                Password
-                            </label>
+                <p> <button onClick={resetPassword} className ='bg-blue-500 hover:bg-blue-700 text-white rounded-full'>Reset Password</button> </p>
 
-                            <input type="password"
-                                className='shodow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-                                placeholder='Password'
-                            />
-                        </div>
-                        <div className='flex items-center justify-between'>
-                            <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>
-                                Sign In
-                            </button>
-                            <a 
-                            className='inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-700'
-                            href="/">
-                                Forgot Password ?</a>
-                        </div>
-                    </form>
-                </div>
-            </div>
+                <ToastContainer />
+                <p className='text-white'>Don't have an account? <Link to='/register'>Please Register</Link></p>
+            </form>
+            <SocialLogin></SocialLogin>
+        </div>
         </>
     );
 };

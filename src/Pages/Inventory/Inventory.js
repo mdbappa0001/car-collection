@@ -18,7 +18,7 @@ const Inventory = ({ inventoryService }) => {
             <h3 className='priceName'>Price : <span className='price'>{price}</span> </h3>
             <h3 className='supplierName'>Supplier Name : <span className='supplier'>{supplierName}</span></h3>
             <h4 className='description'>{description}</h4>
-            <button onClick={()=> navigateToInventoryDetail(id)} className='button1'> Update </button>
+            <button onClick={()=> navigateToInventoryDetail(id)} className='update'> Update </button>
         </div>
     );
 };
