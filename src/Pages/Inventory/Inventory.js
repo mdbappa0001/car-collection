@@ -1,10 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
 import './Inventory.css';
 
 const Inventory = ({ inventoryService }) => {
-    const {id, name, price, img, description, supplierName, quantity } = inventoryService;
+    const {_id, name, price, img, description, supplierName, quantity } = inventoryService;
 
     const navigate = useNavigate();
     const navigateToInventoryDetail = id =>{
@@ -18,7 +17,7 @@ const Inventory = ({ inventoryService }) => {
             <h3 className='priceName'>Price : <span className='price'>{price}</span> </h3>
             <h3 className='supplierName'>Supplier Name : <span className='supplier'>{supplierName}</span></h3>
             <h4 className='description'>{description}</h4>
-            <button onClick={()=> navigateToInventoryDetail(id)} className='update'> Update </button>
+            <button onClick={()=> navigateToInventoryDetail(_id)} className='update'> Update </button>
         </div>
     );
 };

@@ -9,11 +9,9 @@ const SocialLogin = () => {
     let errorElement;
 
     if (error) {
-        return (
            errorElement = <div>
                 <p className='text-red-500'>Error: {error.message}</p>
             </div>
-        );
     }
 
     if (user) {

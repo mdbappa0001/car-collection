@@ -14,7 +14,7 @@ const Header = () => {
 
         <div className=' flex gap-8 text-xl font-bold'>
             <CustomLink to='/'>HOME</CustomLink>
-            <CustomLink to='/inventoryDetails'>InventoryDetails</CustomLink>
+            {/* <CustomLink to='/inventoryDetails'>InventoryDetails</CustomLink> */}
             <CustomLink to='/blog'>BLOG</CustomLink>
             <CustomLink to='/login'>Login</CustomLink>
         </div>

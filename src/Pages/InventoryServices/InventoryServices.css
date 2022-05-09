@@ -2,6 +2,15 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+.heading{
+    margin-left: 46%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family:  sans-serif;
+    font-size: 1.9rem;
+    color: yellowgreen;
+    font-weight: 800;
+}
 
 @media only screen and (max-width:576px) {
     .inventory-container{

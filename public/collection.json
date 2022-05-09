@@ -1,24 +1,6 @@
 [
     {
         "id": 1,
-        "quantity": 15,
-        "name": "Toyota",
-        "img": "https://cdni.autocarindia.com/utils/imageresizer.ashx?n=http://cms.haymarketindia.net/model/uploads/modelimages/CamryModelImage.jpg&w=872&h=578&q=75&c=1",
-        "price": "$40,700",
-        "description": "Toyota has car models that offer something for everyone. Whether youre looking for a compact car for commuting to work, a fun sports car, or a family vehicle to safely transport your loved ones wherever they need to go, you can rely on Toyota.",
-        "supplierName": "MR. Johnson"
-    },
-    {
-        "id": 2,
-        "quantity": 7,
-        "name": "Daimler car",
-        "img": "https://images.news18.com/ibnlive/uploads/2021/05/1620882987_2022-volkswagen-tiguan-suv.jpg",
-        "price": "$35,900",
-        "description": "Volkswagen Group, also called Volkswagen AG, major this is also many specific character. German automobile manufacturer, founded by the German government in 1937 to mass-produce a low-priced “people's car.” Headquarters are in Wolfsburg, Germany.",
-        "supplierName": "Md Ripon"
-    },
-    {
-        "id": 3,
         "quantity": 5,
         "name": "Ford Motor",
         "img": "https://g.foolcdn.com/editorial/images/660239/2021-mustang-mach-e-gt-01.jpg",
@@ -27,7 +9,7 @@
         "supplierName": "Lorem Cox"
     },
     {
-        "id": 4,
+        "id": 2,
         "quantity": 12,
         "name": "Lamborghini ",
         "img": "https://wallpaperaccess.com/full/125680.jpg",
@@ -36,16 +18,7 @@
         "supplierName": "Pilan rox"
     },
     {
-        "id": 5,
-        "quantity": 17,
-        "name": "Ferrari",
-        "img": "https://ocdn.eu/images/pulscms/MTg7MDA_/e16948d7c11589117c97ffdf55cc9ff3.jpeg",
-        "price": "$90,000",
-        "description": "Ferraris are what dreams are made of. Fast, sexy,this is quite important key words so that and highly exclusive, these Italian supercars push the boundaries of performance and cause a stir wherever they go. The sensually styled Roma coupe is the most accessible in terms of price, but even it is far too expensive for most people.",
-        "supplierName": "Lord Cord"
-    },
-    {
-        "id": 6,
+        "id": 3,
         "quantity": 25,
         "name": "Tesla",
         "img": "https://techunwrapped.com/wp-content/uploads/2022/01/Leak-reveals-future-Apple-products-the-price-of-several-cryptocurrencies.jpeg",
@@ -53,6 +26,34 @@
         "description": "Tesla was founded in 2003 by a group of engineers who wanted to compromise to drive vehicles can be better, quicker and more fun to drive than gasoline cars. Today, Tesla builds not only all-electric vehicles but also infinitely scalable clean energy generation and storage products.",
         "supplierName": "Elon Musk"
     },
+    {
+        "id": 4,
+        "quantity": 15,
+        "name": "Toyota",
+        "img": "https://cdni.autocarindia.com/utils/imageresizer.ashx?n=http://cms.haymarketindia.net/model/uploads/modelimages/CamryModelImage.jpg&w=872&h=578&q=75&c=1",
+        "price": "$40,700",
+        "description": "Toyota has car models that offer something for everyone. Whether youre looking for a compact car for commuting to work, a fun sports car, or a family vehicle to safely transport your loved ones wherever they need to go, you can rely on Toyota.",
+        "supplierName": "MR. Johnson"
+    },
+    {
+        "id": 5,
+        "quantity": 7,
+        "name": "Daimler car",
+        "img": "https://images.news18.com/ibnlive/uploads/2021/05/1620882987_2022-volkswagen-tiguan-suv.jpg",
+        "price": "$35,900",
+        "description": "Volkswagen Group, also called Volkswagen AG, major this is also many specific character. German automobile manufacturer, founded by the German government in 1937 to mass-produce a low-priced “people's car.” Headquarters are in Wolfsburg, Germany.",
+        "supplierName": "Md Ripon"
+    },
+    {
+        "id": 6,
+        "quantity": 17,
+        "name": "Ferrari",
+        "img": "https://ocdn.eu/images/pulscms/MTg7MDA_/e16948d7c11589117c97ffdf55cc9ff3.jpeg",
+        "price": "$90,000",
+        "description": "Ferraris are what dreams are made of. Fast, sexy,this is quite important key words so that and highly exclusive, these Italian supercars push the boundaries of performance and cause a stir wherever they go. The sensually styled Roma coupe is the most accessible in terms of price, but even it is far too expensive for most people.",
+        "supplierName": "Lord Cord"
+    },
+ 
     {
         "id": 7,
         "quantity": 3,
