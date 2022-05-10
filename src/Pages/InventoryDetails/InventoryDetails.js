@@ -13,7 +13,7 @@ const InventoryDetails = () => {
             .then(res => res.json())
             .then(data => setService(data))
 
-    }, [])
+    }, [inventoryDetailsId])
 
     const handleLogin = (e) => {
         e.preventDefault();
