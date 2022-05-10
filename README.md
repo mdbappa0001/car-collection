@@ -1,6 +1,6 @@
 # Car Collection
 
-Private Repo Link [Create React App](https://car-collection-13154.web.app/manageInventory).
+Private Repo Link [Create React App](https://car-collection-13154.web.app/).
 
 ## About This Projects
 
