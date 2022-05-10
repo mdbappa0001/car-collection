@@ -14,9 +14,11 @@ useEffect (()=>{
     return (
         <div className='inventory-container'>
             {
-                inventoryServices.map(inventoryService => <ManageInventoryCard
+                inventoryServices.map(inventoryService => 
+                <ManageInventoryCard
                 key={inventoryService._id}
                 inventoryService = {inventoryService}
+                setInventoryServices={setInventoryServices}
                 ></ManageInventoryCard>)
             }
         </div>

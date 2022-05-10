@@ -2,6 +2,7 @@
 import { createContext, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import AddInventory from './Pages/AddInventory/AddInventory';
 import AddItem from './Pages/AddItem/AddItem';
 import Blog from './Pages/Blog/Blog';
 import Home from './Pages/Home/Home';
@@ -44,7 +45,12 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
-        <Route path='/manageInventory' element={<ManageInventory></ManageInventory>}></Route>
+        <Route path='/manageInventory' element={
+          <RequireAuth>
+            <ManageInventory></ManageInventory>
+          </RequireAuth>
+        }></Route>
+        <Route path='/addInventory' element={<AddInventory></AddInventory>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
