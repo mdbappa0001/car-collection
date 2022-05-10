@@ -1,18 +1,25 @@
-# Getting Started with Create React App
+# Car Collection
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Private Repo Link [Create React App](https://car-collection-13154.web.app/manageInventory).
 
-## Available Scripts
+## About This Projects
 
-In the project directory, you can run:
+- This project represent different types of Car.
+- In Home route, we show a title and a logo of car and  also added 3 car below.
+- In Home section we also show 2 extra section.
+- In Home section also show a footer section.
+- In Blogs route, we show some question and answer.
+- In Manage Inventory Route we show all the productslist.
+- We also show some login and singout route also.
 
-### `npm start`
+## Frameword that i used in this project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React bootstarp
+- React Hook Form
+- React Toast
+- React Tailwind
+- React Firebase Hooks
+- vanilla css
 
 ### `npm test`
 
