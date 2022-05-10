@@ -12,7 +12,7 @@ useEffect (()=>{
 },[setInventoryServices])
 
     return (
-        <div>
+        <div className='inventory-container'>
             {
                 inventoryServices.map(inventoryService => <ManageInventoryCard
                 key={inventoryService._id}

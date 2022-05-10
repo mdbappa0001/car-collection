@@ -37,7 +37,9 @@ const InventoryDetails = () => {
                     <form onSubmit={handleLogin} className='login-form'>
                         <input type="text" placeholder='Please Add New Quantity' />
                         <button className='bg-blue-500 hover:bg-blue-700 text-white rounded-full'>Add Quantity</button>
-                        <button className='bg-blue-500 hover:bg-blue-700 text-white rounded-full'>Manage Inventory</button>
+                        <button className='bg-blue-500 hover:bg-blue-700 text-white rounded-full'>
+                            <Link to='/manageInventory'> Manage Inventory</Link>
+                            </button>
                     </form>
                 </div>
             </div>
