@@ -3,25 +3,25 @@ import Inventory from '../Inventory/Inventory';
 import './InventoryServices.css';
 
 const InventoryServices = () => {
-    const [inventoryServices , setInventoryServices] = useState([]);
+    const [inventoryServices, setInventoryServices] = useState([]);
 
-useEffect( () =>{
-    fetch('http://localhost:5000/service')
-    .then(res => res.json())
-    .then(data => setInventoryServices(data))
-} , [])
+    useEffect(() => {
+        fetch('https://arcane-peak-37346.herokuapp.com/service')
+            .then(res => res.json())
+            .then(data => setInventoryServices(data))
+    }, [])
 
     return (
         <div>
             <h2 className='heading'>Car Show</h2>
-        <div className='inventory-container'>
-        {
-                inventoryServices.slice(0,3).map(inventoryService => <Inventory 
-                key = {inventoryService._id}
-                inventoryService={inventoryService}
-                ></Inventory>)
-            }
-        </div>
+            <div className='inventory-container'>
+                {
+                    inventoryServices.slice(0, 3).map(inventoryService => <Inventory
+                        key={inventoryService._id}
+                        inventoryService={inventoryService}
+                    ></Inventory>)
+                }
+            </div>
         </div>
     );
 };

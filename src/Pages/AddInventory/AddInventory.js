@@ -8,7 +8,7 @@ const AddInventory = () => {
 
     const onSubmit = data => {
         console.log(data)
-        const url = `http://localhost:5000/service`;
+        const url = `https://arcane-peak-37346.herokuapp.com/service`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -16,10 +16,10 @@ const AddInventory = () => {
             },
             body: JSON.stringify(data)
         })
-        .then(res => res.json())
-        .then(result => {
-            console.log(result);
-        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result);
+            })
     }
 
 

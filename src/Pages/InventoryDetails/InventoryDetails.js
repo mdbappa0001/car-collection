@@ -7,7 +7,7 @@ const InventoryDetails = () => {
     const [service, setService] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:5000/service/${inventoryDetailsId}`;
+        const url = `https://arcane-peak-37346.herokuapp.com/service/${inventoryDetailsId}`;
 
         fetch(url)
             .then(res => res.json())
@@ -39,7 +39,7 @@ const InventoryDetails = () => {
                         <button className='bg-blue-500 hover:bg-blue-700 text-white rounded-full'>Add Quantity</button>
                         <button className='bg-blue-500 hover:bg-blue-700 text-white rounded-full'>
                             <Link to='/manageInventory'> Manage Inventory</Link>
-                            </button>
+                        </button>
                     </form>
                 </div>
             </div>

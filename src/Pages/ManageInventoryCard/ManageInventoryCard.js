@@ -8,12 +8,12 @@ const ManageInventoryCard = ({ inventoryService, setInventoryServices }) => {
     const handleDelete = id => {
         const proceed = window.confirm('Are You Sure?');
         if (proceed) {
-            const url = `http://localhost:5000/service/${id}`;
+            const url = `https://arcane-peak-37346.herokuapp.com/service/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
-                .then(data =>{
+                .then(data => {
                     console.log(data);
                     const remaining = inventoryService.filter(inventoryService => inventoryService._id !== id)
                     setInventoryServices(remaining);
