@@ -1,0 +1,33 @@
+.ourService{
+    background-color: rgb(103, 103, 85);
+    padding: 20px;
+    margin-bottom: 10px;
+}
+.serviceHeading{
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: rgb(166, 242, 13);
+    margin-left: 45%;
+    margin-bottom: 20px;
+}
+.serviceName{
+    display: flex;
+    margin-bottom: 20px;
+}
+.first{
+    width: 50%;
+    margin-left: 25%;
+}
+.first>li{
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+}
+.second{
+    width: 50%;
+}
+.second>li{
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+}
