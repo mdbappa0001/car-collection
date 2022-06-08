@@ -24,7 +24,7 @@ export const InventoryContext = createContext();
 function App() {
 
   const [inventoryServices , setInventoryServices] = useState([]);
-  console.log(inventoryServices);
+  // console.log(inventoryServices);
 
   return (
 

@@ -5,7 +5,6 @@ import './AddInventory.css';
 
 const AddInventory = () => {
     const { register, handleSubmit } = useForm();
-
     const onSubmit = data => {
         console.log(data)
         const url = `https://arcane-peak-37346.herokuapp.com/service`;
@@ -14,11 +13,12 @@ const AddInventory = () => {
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify({ data })
         })
             .then(res => res.json())
             .then(result => {
                 console.log(result);
+
             })
     }
 
@@ -39,3 +39,8 @@ const AddInventory = () => {
 };
 
 export default AddInventory;
+
+
+
+
+
